@@ -1,0 +1,13 @@
+module mux_2_1bh(y,i,s);
+  input wire [1:0]i;
+  input wire s;
+ output reg y;
+  
+  always@(i,s)
+    begin
+    if(s)
+      y=i[1];
+  else
+    y=i[0];
+    end
+endmodule
